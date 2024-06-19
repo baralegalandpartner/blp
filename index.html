@@ -710,6 +710,21 @@ window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {}
             } 
         };
 	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/devtools-detector/2.0.17/devtools-detector.js"></script>
+<script>
+  var view = document.createElement('div');
+  document.body.appendChild(view);
+
+  devtoolsDetector.addListener(function(isOpen) {
+    // view.innerText = isOpen
+    //   ? 'devtools status: open'
+    //   : 'devtools status: close';
+    if(isOpen){
+        location.reload();
+    }
+  });
+  devtoolsDetector.launch();
+</script>
 <!-- cndrx -->
 </body>
 
